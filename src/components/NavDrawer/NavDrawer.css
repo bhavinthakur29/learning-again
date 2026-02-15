@@ -1,0 +1,65 @@
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0px);
+    /* Start with no blur */
+    opacity: 0;
+    visibility: hidden;
+    /* Transition both opacity and backdrop-filter */
+    transition: opacity 0.4s ease, backdrop-filter 0.4s ease, visibility 0.4s;
+    z-index: 999;
+}
+
+.drawer-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(4px);
+    /* Blur fades in */
+}
+
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Fully hidden to the right */
+    width: 280px;
+    height: 100vh;
+    background-color: var(--background);
+    border-left: 1px solid var(--border);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* Powerhouse transition: Slide-in effect */
+    transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1),
+        right 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-drawer.open {
+    right: 0;
+    /* Slides into view */
+}
+
+/* Add a slight staggered fade for the links inside */
+.nav-drawer.open .drawer-nav {
+    animation: fadeInSlide 0.5s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
