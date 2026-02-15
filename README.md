@@ -1,16 +1,44 @@
-# React + Vite
+# New-App: React + Vite + shadcn/ui + Tailwind v4
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- **shadcn/ui** component library (with Zinc palette)
+- **Tailwind CSS v4** for modern utility-first styling
+- **Animated Theme Toggle** (Sun/Moon, shadcn Button, Lucide icons)
+- **Global Zinc color variables** for consistent theming
+- **Smooth background transitions** on theme change
+- **No legacy/manual Tailwind or lightswind styles**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Quick Start
 
-## React Compiler
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start dev server:
+   ```bash
+   npm run dev
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Theme Toggle
 
-## Expanding the ESLint configuration
+- Uses shadcn Button (variant: ghost, size: icon)
+- Sun/Moon icons from Lucide animate with rotation/scale
+- Zinc palette synced for light/dark modes
+- Body background transitions smoothly
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Customization
+
+- Edit `src/index.css` for global styles and Zinc palette
+- Components use shadcn/ui and Tailwind classes
+
+## Credits
+
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [Vite](https://vitejs.dev/)
+
+---
+
+Feel free to customize further and enjoy your modern React setup!
